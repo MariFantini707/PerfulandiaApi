@@ -21,4 +21,8 @@ public class Carrito{
     @Column(nullable = false)
     private Integer cantidad_carrito;
 
+    @ManyToOne
+    @JoinColumn(name = "id_cliente", nullable = false)
+    private Cliente cliente;
+
 }

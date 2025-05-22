@@ -22,4 +22,7 @@ public class Factura {
     @Column(nullable = false)
     private Date fecha_emision;
 
+    @OneToOne
+    @JoinColumn(name = "id_venta", nullable = false)
+    private Venta venta;
 }
