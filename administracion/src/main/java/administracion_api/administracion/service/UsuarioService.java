@@ -27,9 +27,9 @@ public class UsuarioService {
     public Optional<Usuario> actualizar(Integer id, Usuario datos) {
         return usuarioRepository.findById(id).map(p -> {
             p.setNombre_usuario(datos.getNombre_usuario());
-            p.setTelefono_usuario(datos.getTelefono_usuario());
+            p.setRut_usuario(datos.getRut_usuario());
             p.setCorreo_usuario(datos.getCorreo_usuario());
-            p.setDireccion_usuario(datos.getDireccion_usuario());
+            p.setRol(datos.getRol());
             return usuarioRepository.save(p);
         });
     }

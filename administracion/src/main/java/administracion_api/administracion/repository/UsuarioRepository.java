@@ -1,12 +1,11 @@
 package administracion_api.administracion.repository;
 
-//import java.util.List;
-//import org.springframework.data.jpa.repository.JpaRepository;
-//import org.springframework.data.jpa.repository.Query;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
-public class UsuarioRepository {
+import administracion_api.administracion.model.Usuario;
+
+
+public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 
     
 }
