@@ -31,7 +31,7 @@ public class SucursalService {
             p.setNombre_sucursal(datos.getNombre_sucursal());
             p.setDireccion_sucursal(datos.getDireccion_sucursal());
             p.setTelefono(datos.getTelefono());
-            p.setInventario(datos.getInventario());
+            p.setId_inventario(datos.getId_inventario());
             return sucursalRepository.save(p);
         });
     }

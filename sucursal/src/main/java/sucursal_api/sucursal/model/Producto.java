@@ -24,13 +24,17 @@ public class Producto {
     @Column(nullable=true)
     private Integer precio_producto;
 
+
     @ManyToOne
     @JoinColumn(name = "id_inventario", nullable = false)
-    private Inventario inventario;
+    private Integer id_inventario;
+
     @ManyToOne
     @JoinColumn(name = "id_categoria", nullable = false)
-    private Categoria categoria;
+    private Integer id_categoria;
+        
+    
     @ManyToOne
     @JoinColumn(name = "id_detalle_pedido", nullable = false)
-    private Categoria id_detalle_pedido;
+    private Integer id_detalle_pedido;
 }
