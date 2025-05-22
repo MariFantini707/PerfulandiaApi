@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class carrito{
+public class Carrito{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class resena {
+public class Resena {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

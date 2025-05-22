@@ -2,7 +2,7 @@ package operaciones_api.operaciones.service;
 
 import org.springframework.stereotype.Service;
 
-import operaciones_api.operaciones.model.cliente;
+import operaciones_api.operaciones.model.Cliente;
 import operaciones_api.operaciones.repository.ClienteRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,19 +17,19 @@ public class ClienteService {
     @Autowired
     private ClienteRepository clienteRepository;
 
-    public List<cliente> obtenerTodos() {
+    public List<Cliente> obtenerTodos() {
         return clienteRepository.findAll();
     }
 
-    public Optional<cliente> obtenerPorId(Integer id) {
+    public Optional<Cliente> obtenerPorId(Integer id) {
         return clienteRepository.findById(id);
     }
 
-    public cliente guardar(cliente cliente) {
+    public Cliente guardar(Cliente cliente) {
         return clienteRepository.save(cliente);
     }
 
-    public Optional<cliente> actualizar(Integer id, cliente datos) {
+    public Optional<Cliente> actualizar(Integer id, Cliente datos) {
         return clienteRepository.findById(id).map(p -> {
             p.setNombre_cliente(datos.getNombre_cliente());
             p.setCorreo_cliente(datos.getCorreo_cliente());

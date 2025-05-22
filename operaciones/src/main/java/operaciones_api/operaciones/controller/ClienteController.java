@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import operaciones_api.operaciones.model.cliente;
+import operaciones_api.operaciones.model.Cliente;
 import operaciones_api.operaciones.service.ClienteService;
 
 
@@ -24,26 +24,26 @@ public class ClienteController {
     private ClienteService clienteService;
 
     @GetMapping
-    public List<cliente> listarClientees() {
+    public List<Cliente> listarClientees() {
         return clienteService.obtenerTodos();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<cliente> obtenerCliente(@PathVariable Integer id) {
+    public ResponseEntity<Cliente> obtenerCliente(@PathVariable Integer id) {
         return clienteService.obtenerPorId(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping
-    public cliente crearCliente(@RequestBody cliente cliente) {
+    public Cliente crearCliente(@RequestBody Cliente cliente) {
         return clienteService.guardar(cliente);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> actualizarCliente(@PathVariable Integer id, @RequestBody cliente datos) {
+    public ResponseEntity<?> actualizarCliente(@PathVariable Integer id, @RequestBody Cliente datos) {
         try {
-            Optional<cliente> clienteActualizado = clienteService.actualizar(id, datos);
+            Optional<Cliente> clienteActualizado = clienteService.actualizar(id, datos);
         
             if (clienteActualizado.isPresent()) {
                 return ResponseEntity.ok(clienteActualizado.get());
