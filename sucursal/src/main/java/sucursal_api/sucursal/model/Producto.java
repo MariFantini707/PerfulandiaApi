@@ -27,14 +27,14 @@ public class Producto {
 
     @ManyToOne
     @JoinColumn(name = "id_inventario", nullable = false)
-    private Integer id_inventario;
+    private Inventario inventario;
 
     @ManyToOne
     @JoinColumn(name = "id_categoria", nullable = false)
-    private Integer id_categoria;
+    private Categoria categoria;
         
     
-    @ManyToOne
-    @JoinColumn(name = "id_detalle_pedido", nullable = false)
-    private Integer id_detalle_pedido;
+    //@ManyToOne
+    //@JoinColumn(name = "id_detalle_pedido", nullable = false)
+    //private Detalle_pedido Detalle_pedido;
 }

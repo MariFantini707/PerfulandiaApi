@@ -26,5 +26,5 @@ public class Sucursal {
 
     @OneToOne
     @JoinColumn(name = "id_inventario", nullable = false)
-    private Integer id_inventario;
+    private Inventario inventario;
 }

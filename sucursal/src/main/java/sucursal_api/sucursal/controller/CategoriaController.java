@@ -18,7 +18,7 @@ import sucursal_api.sucursal.service.CategoriaService;
 
 
 @RestController
-@RequestMapping("/api/sucursal/productos")
+@RequestMapping("/api/sucursal/categorias")
 public class CategoriaController {
     @Autowired
     private CategoriaService categoriaService;

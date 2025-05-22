@@ -30,9 +30,9 @@ public class ProductoService {
             p.setNombre_producto(datos.getNombre_producto());
             p.setDescripcion_producto(datos.getDescripcion_producto());
             p.setPrecio_producto(datos.getPrecio_producto());
-            p.setId_inventario(datos.getId_inventario());
-            p.setId_categoria(datos.getId_categoria());
-            p.setId_detalle_pedido(datos.getId_detalle_pedido());
+            p.setInventario(datos.getInventario());
+            p.setCategoria(datos.getCategoria());
+            //p.setId_detalle_pedido(datos.getId_detalle_pedido());
             return productoRepository.save(p);
         });
     }
