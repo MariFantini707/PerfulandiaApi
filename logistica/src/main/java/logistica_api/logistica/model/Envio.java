@@ -33,4 +33,9 @@ public class Envio {
 
     @OneToMany(mappedBy = "envio")
     private List<Pedido> pedidos;
+
+    @ManyToOne
+    @JoinColumn(name = "id_ruta") 
+    private RutaEntrega rutaEntrega;
+
 }
