@@ -1,4 +1,4 @@
-package model;
+package soporte_api.soporte.model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
