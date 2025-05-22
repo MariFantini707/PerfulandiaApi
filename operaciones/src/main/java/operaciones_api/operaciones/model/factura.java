@@ -1,4 +1,4 @@
-package model;
+package operaciones_api.operaciones.model;
 
 import java.util.Date;
 
@@ -9,19 +9,17 @@ import lombok.NoArgsConstructor;
 
 
 @Entity
-@Table(name = "venta")
+@Table(name = "factura")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class venta {
+public class factura {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(nullable = false)
-    private Date fecha_venta;
+    private Date fecha_emision;
 
-    @Column(nullable = false)
-    private Integer total_venta;
 }

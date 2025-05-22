@@ -1,4 +1,4 @@
-package model;
+package operaciones_api.operaciones.model;
 
 
 import jakarta.persistence.*;
@@ -8,20 +8,17 @@ import lombok.NoArgsConstructor;
 
 
 @Entity
-@Table(name = "detalle_venta")
+@Table(name = "carrito")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class detalle_venta {
+public class carrito{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(nullable = false)
-    private Integer cantidad_venta;
-
-    @Column(nullable = false)
-    private Integer precio_unitario;
+    private Integer cantidad_carrito;
 
 }

@@ -1,4 +1,6 @@
-package model;
+package operaciones_api.operaciones.model;
+
+import java.util.Date;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,23 +9,19 @@ import lombok.NoArgsConstructor;
 
 
 @Entity
-@Table(name = "cliente")
+@Table(name = "venta")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class cliente {
+public class venta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(nullable = false)
-    private String nombre_cliente;
+    private Date fecha_venta;
 
     @Column(nullable = false)
-    private String correo_cliente;
-
-    @Column(nullable = false)
-    private String direccion_cliente;
-
+    private Integer total_venta;
 }
