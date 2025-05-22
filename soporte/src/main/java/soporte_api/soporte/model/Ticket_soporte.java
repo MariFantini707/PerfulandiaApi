@@ -1,4 +1,4 @@
-package model;
+package soporte_api.soporte.model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -29,9 +29,6 @@ public class Ticket_soporte {
     @Column(nullable = false)
     @Temporal(TemporalType.DATE)  
     private Date fecha_inicio;
-
-    @Column(nullable=true)
-    private Integer precio_producto;
 
     @Column(length = 200, nullable=false)
     private String respuesta_ticket;

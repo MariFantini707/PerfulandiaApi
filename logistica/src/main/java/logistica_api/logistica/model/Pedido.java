@@ -17,6 +17,7 @@ import lombok.NoArgsConstructor;
 public class Pedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_pedido")
     private Integer id;
 
     @Column(nullable = false)
@@ -27,4 +28,13 @@ public class Pedido {
 
     @Column(nullable = false)
     private Integer total_pedido;
+
+    @ManyToOne
+    @JoinColumn(name = "proveedor_id", nullable = false)
+    private Proveedor proveedor;
+
+    @ManyToOne
+    @JoinColumn(name = "id_envio", nullable = false)
+    private Envio envio;
+
 }
