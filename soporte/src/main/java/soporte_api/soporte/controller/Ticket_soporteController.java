@@ -54,8 +54,6 @@ public class Ticket_soporteController {
         }
     }
 
-
-
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminarticket_soporte(@PathVariable Integer id) {
         if (ticket_soporteService.eliminar(id)) {

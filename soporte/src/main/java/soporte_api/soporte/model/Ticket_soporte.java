@@ -33,11 +33,4 @@ public class Ticket_soporte {
     @Column(length = 200, nullable=false)
     private String respuesta_ticket;
 
-    /*@ManyToOne
-    @JoinColumn(name = "id_usuario", nullable = false)
-    private Cliente cliente;
-
-    @ManyToOne
-    @JoinColumn(name = "id_usuario", nullable = false)
-    private Usuario usuario;  */
 }
