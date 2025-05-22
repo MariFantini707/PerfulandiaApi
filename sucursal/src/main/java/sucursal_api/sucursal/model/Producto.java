@@ -33,7 +33,6 @@ public class Producto {
     @JoinColumn(name = "id_categoria", nullable = false)
     private Categoria categoria;
         
-    
     //@ManyToOne
     //@JoinColumn(name = "id_detalle_pedido", nullable = false)
     //private Detalle_pedido Detalle_pedido;
