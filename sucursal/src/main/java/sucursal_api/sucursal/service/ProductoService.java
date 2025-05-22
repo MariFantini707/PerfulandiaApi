@@ -4,10 +4,11 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import sucursal_api.sucursal.model.Producto;
 import sucursal_api.sucursal.repository.ProductoRepository;
-
+@Service
 public class ProductoService {
 @Autowired
     private ProductoRepository productoRepository;
@@ -31,7 +32,7 @@ public class ProductoService {
             p.setPrecio_producto(datos.getPrecio_producto());
             p.setInventario(datos.getInventario());
             p.setCategoria(datos.getCategoria());
-            p.setId_detalle_pedido(datos.getId_detalle_pedido());
+            //p.setId_detalle_pedido(datos.getId_detalle_pedido());
             return productoRepository.save(p);
         });
     }
