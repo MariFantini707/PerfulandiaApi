@@ -29,6 +29,6 @@ public class RutaEntrega {
     private Integer tiempo_estimado; // creo que lo dejaré en minutos, en los envios no suelen hablar en horas (creo(?))
 
     // una ruta puede tener muchos envios de por medio... 
-    @OneToMany(mappedBy = "RutaEntrega")
+    @OneToMany(mappedBy = "rutaEntrega")
     private List<Envio> envios;
 }
