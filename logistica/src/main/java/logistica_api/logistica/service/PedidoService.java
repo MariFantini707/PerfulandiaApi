@@ -30,7 +30,7 @@ public class PedidoService {
         return pedidoRepository.findById(id).map(p -> {
             p.setFechaPedido(datos.getFechaPedido());
             p.setEstadoPedido(datos.getEstadoPedido());
-            p.setTotal_pedido(datos.getTotal_pedido());
+            p.setTotalPedido(datos.getTotalPedido());
             p.setProveedor(datos.getProveedor()); // tambien se podría actualizar el proveedor si asi lo queremos
             return pedidoRepository.save(p);
         });
