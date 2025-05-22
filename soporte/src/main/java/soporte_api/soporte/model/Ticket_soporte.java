@@ -33,4 +33,8 @@ public class Ticket_soporte {
     @Column(length = 200, nullable=false)
     private String respuesta_ticket;
 
+    @Column(name = "id_usuario_soporte")
+    private Integer idUsuarioSoporte;
+
+
 }

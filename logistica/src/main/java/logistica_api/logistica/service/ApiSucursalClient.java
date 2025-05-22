@@ -8,11 +8,12 @@ import logistica_api.logistica.logisticaApiDto.ProductoDto;
 
 @Service
 public class ApiSucursalClient {
+
     @Autowired
     private RestTemplate restTemplate;
 
     public ProductoDto obtenerProductoDesdeSucursal(Integer idSucursal, Integer idProducto) {
-        String url = "http://localhost:8085/sucursales/" + idSucursal + "/productos/" + idProducto;
+        String url = "http://localhost:8085/api/sucursal/productos/" + idProducto;
         return restTemplate.getForObject(url, ProductoDto.class);
     }
 }

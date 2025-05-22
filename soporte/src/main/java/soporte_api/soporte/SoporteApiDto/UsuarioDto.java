@@ -8,6 +8,12 @@ public class UsuarioDto {
     private String nombre_usuario;
     private String rut_usuario;
     private String correo_usuario;
-    private String rol;
+    private RolDto rol;
     //private Sucursal sucursal
+
+    @Data
+    public static class RolDto {
+        private Integer id;
+        private String nombre;
+    }
 }

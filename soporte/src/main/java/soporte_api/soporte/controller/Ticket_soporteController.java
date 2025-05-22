@@ -34,6 +34,12 @@ public class Ticket_soporteController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/usuario-soporte/{idUsuario}")
+    public ResponseEntity<List<Ticket_soporte>> obtenerTicketsPorSoporte(@PathVariable Integer idUsuario) {
+        List<Ticket_soporte> tickets = ticket_soporteService.obtenerTicketsPorUsuarioSoporte(idUsuario);
+        return ResponseEntity.ok(tickets);
+    }
+
     @PostMapping
     public Ticket_soporte crearticket_soporte(@RequestBody Ticket_soporte ticket_soporte) {
         return ticket_soporteService.guardar(ticket_soporte);

@@ -1,6 +1,7 @@
 package soporte_api.soporte.service;
 import org.springframework.stereotype.Service;
 
+import soporte_api.soporte.SoporteApiDto.UsuarioDto;
 import soporte_api.soporte.model.Ticket_soporte;
 import soporte_api.soporte.repository.Ticket_soporteRepository;
 
@@ -12,6 +13,9 @@ import java.util.Optional;
 public class Ticket_soporteService {
     @Autowired
     private Ticket_soporteRepository ticket_soporteRepository;
+
+    @Autowired
+    private UsuarioClient usuarioClient;
 
     public List<Ticket_soporte> obtenerTodos() {
         return ticket_soporteRepository.findAll();
@@ -43,4 +47,17 @@ public class Ticket_soporteService {
         }
         return false;
     }
+
+    //Ejemplo: obtener datos del usuario que responde
+    public String obtenerNombreUsuarioSoporte(Integer idUsuario) {
+        UsuarioDto usuario = usuarioClient.obtenerUsuarioPorId(idUsuario);
+        return usuario.getNombre_usuario();
+    }
+
+    //obtiene todos los tickets asginados a un soporte usando al id
+    public List<Ticket_soporte> obtenerTicketsPorUsuarioSoporte(Integer idUsuario) {
+        return ticket_soporteRepository.findByIdUsuarioSoporte(idUsuario);
+    }
+
+
 }
