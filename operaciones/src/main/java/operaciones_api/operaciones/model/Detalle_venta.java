@@ -24,4 +24,7 @@ public class Detalle_venta {
     @Column(nullable = false)
     private Integer precio_unitario;
 
+    @ManyToOne
+    @JoinColumn(name = "id_venta", nullable = false)
+    private Venta venta;
 }

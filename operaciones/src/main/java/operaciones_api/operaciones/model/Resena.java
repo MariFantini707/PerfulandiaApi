@@ -23,4 +23,9 @@ public class Resena {
 
     @Column(nullable = false)
     private Integer puntiacion;
+
+    @ManyToOne
+    @JoinColumn(name = "id_cliente", nullable = false)
+    private Cliente cliente;
+
 }

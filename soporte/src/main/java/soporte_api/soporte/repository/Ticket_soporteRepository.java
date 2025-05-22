@@ -2,6 +2,8 @@ package soporte_api.soporte.repository;
 
 import java.util.List;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import soporte_api.soporte.model.Ticket_soporte;

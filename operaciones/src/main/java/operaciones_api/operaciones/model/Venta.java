@@ -24,4 +24,9 @@ public class Venta {
 
     @Column(nullable = false)
     private Integer total_venta;
+
+    @ManyToOne
+    @JoinColumn(name = "id_cliente", nullable = false)
+    private Cliente cliente;
+
 }
