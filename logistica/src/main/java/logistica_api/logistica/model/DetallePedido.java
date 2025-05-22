@@ -22,6 +22,9 @@ public class DetallePedido {
     @Column(nullable = false)
     private Integer cantidad;
 
+    @Column(name = "id_producto", nullable = false)
+    private Integer idProducto;
+
     @ManyToOne
     @JoinColumn(name = "pedido_id", nullable = false)
     private Pedido pedido;
