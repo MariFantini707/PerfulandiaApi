@@ -30,9 +30,6 @@ public class Ticket_soporte {
     @Temporal(TemporalType.DATE)  
     private Date fecha_inicio;
 
-    @Column(nullable=true)
-    private Integer precio_producto;
-
     @Column(length = 200, nullable=false)
     private String respuesta_ticket;
 
