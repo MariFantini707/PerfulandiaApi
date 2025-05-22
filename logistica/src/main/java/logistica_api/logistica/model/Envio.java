@@ -26,7 +26,7 @@ public class Envio {
     private Date fecha_envio;
 
     @Column(name = "estado_envio", length = 100, nullable = false)
-    private String estado_envio;
+    private String estadoEnvio;
 
     @Column(name = "origen", length = 100, nullable = false)
     private String origen;

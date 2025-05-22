@@ -29,7 +29,7 @@ public class EnvioService {
     public Optional<Envio> actualizar(Integer id, Envio datos) {
         return envioRepository.findById(id).map(e -> {
             e.setFecha_envio(datos.getFecha_envio());
-            e.setEstado_envio(datos.getEstado_envio());
+            e.setEstadoEnvio(datos.getEstadoEnvio());
             e.setOrigen(datos.getOrigen());
             return envioRepository.save(e);
         });

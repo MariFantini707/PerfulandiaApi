@@ -30,10 +30,10 @@ public class ProveedorService {
 
     public Optional<Proveedor> actualizar(Integer id, Proveedor datos) {
         return proveedorRepository.findById(id).map(p -> {
-            p.setNombre_proveedor(datos.getNombre_proveedor());
-            p.setTelefono_proveedor(datos.getTelefono_proveedor());
-            p.setCorreo_proveedor(datos.getCorreo_proveedor());
-            p.setDireccion_proveedor(datos.getDireccion_proveedor());
+            p.setNombreProveedor(datos.getNombreProveedor());
+            p.setTelefonoProveedor(datos.getTelefonoProveedor());
+            p.setCorreoProveedor(datos.getCorreoProveedor());
+            p.setDireccionProveedor(datos.getDireccionProveedor());
             return proveedorRepository.save(p);
         });
     }

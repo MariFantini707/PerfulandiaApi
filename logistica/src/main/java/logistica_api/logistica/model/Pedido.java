@@ -20,11 +20,11 @@ public class Pedido {
     @Column(name = "id_pedido")
     private Integer id;
 
-    @Column(nullable = false)
-    private Date fecha_Pedido;
+    @Column(name = "fecha_pedido", nullable = false)
+    private Date fechaPedido;
 
-    @Column(nullable = false)
-    private String estado_pedido;
+    @Column(name = "estado_pedido", nullable = false)
+    private String estadoPedido;
 
     @Column(nullable = false)
     private Integer total_pedido;

@@ -16,19 +16,19 @@ public class Proveedor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_proveedor")
-    private Integer id;
+    private Integer idProveedor;
 
-    @Column(length=150,nullable = false)
-    private String nombre_proveedor;
+    @Column(length=150, nullable = false, name = "nombre_proveedor")
+    private String nombreProveedor;
 
-    @Column(nullable = false)
-    private Integer telefono_proveedor;
+    @Column(nullable = false, name = "telefono_proveedor")
+    private Integer telefonoProveedor;
 
-    @Column(length=100,nullable = false)
-    private String correo_proveedor;
+    @Column(length = 100, nullable = false, name = "correo_proveedor")
+    private String correoProveedor;
 
-    @Column(length=150,nullable = false)
-    private String direccion_proveedor;
+    @Column(length = 150, nullable = false, name = "direccion_proveedor")
+    private String direccionProveedor;
 
     
 }

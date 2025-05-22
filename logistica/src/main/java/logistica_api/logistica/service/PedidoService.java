@@ -28,8 +28,8 @@ public class PedidoService {
 
     public Optional<Pedido> actualizar(Integer id, Pedido datos) {
         return pedidoRepository.findById(id).map(p -> {
-            p.setFecha_Pedido(datos.getFecha_Pedido());
-            p.setEstado_pedido(datos.getEstado_pedido());
+            p.setFechaPedido(datos.getFechaPedido());
+            p.setEstadoPedido(datos.getEstadoPedido());
             p.setTotal_pedido(datos.getTotal_pedido());
             p.setProveedor(datos.getProveedor()); // tambien se podría actualizar el proveedor si asi lo queremos
             return pedidoRepository.save(p);
