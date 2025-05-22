@@ -28,7 +28,7 @@ public class Ticket_soporteService {
     public Optional<Ticket_soporte> actualizar(Integer id, Ticket_soporte datos) {
         return ticket_soporteRepository.findById(id).map(p -> {
             p.setDescripcion(datos.getDescripcion());
-            p.setEstado_ticket(datos.getEstado_ticket());
+            p.setEstadoTicket(datos.getEstadoTicket());
             p.setFecha_termino(datos.getFecha_termino());
             p.setFecha_inicio(datos.getFecha_inicio());
             p.setRespuesta_ticket(datos.getRespuesta_ticket());

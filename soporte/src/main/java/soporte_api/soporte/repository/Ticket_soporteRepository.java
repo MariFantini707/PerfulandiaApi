@@ -8,8 +8,8 @@ import soporte_api.soporte.model.Ticket_soporte;
 
 public interface Ticket_soporteRepository extends JpaRepository<Ticket_soporte, Integer> {
     // Buscar por estado
-    List<Ticket_soporte> findByEstadoTicket(String estado_ticket);
+    List<Ticket_soporte> findByEstadoTicket(String estadoTicket);
     
     // Buscar por id
-    List<Ticket_soporte> findByIdTicket(String id_ticket);
+    List<Ticket_soporte> findByIdTicket(Integer idTicket);
 }

@@ -14,23 +14,24 @@ import java.util.Date;
 public class Ticket_soporte {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_ticket;
+    @Column(name = "id_ticket")
+    private Integer idTicket;
 
-    @Column(length = 200, nullable=false)
+    @Column(name = "descripcion", length = 200, nullable=false)
     private String descripcion;
 
-    @Column(length = 30, nullable=false)
-    private String estado_ticket;
+    @Column(name = "estado_ticket", length = 30, nullable=false)
+    private String estadoTicket;
 
-    @Column(nullable = false)
+    @Column(name = "fecha_termino", nullable = false)
     @Temporal(TemporalType.DATE)  
     private Date fecha_termino;
 
-    @Column(nullable = false)
+    @Column(name = "fecha_inicio", nullable = false)
     @Temporal(TemporalType.DATE)  
     private Date fecha_inicio;
 
-    @Column(length = 200, nullable=false)
+    @Column(name = "respuesta_ticket", length = 200, nullable=false)
     private String respuesta_ticket;
 
 }
