@@ -27,7 +27,7 @@ public class Pedido {
     private String estadoPedido;
 
     @Column(nullable = false)
-    private Integer total_pedido;
+    private Integer totalPedido;
 
     @ManyToOne
     @JoinColumn(name = "proveedor_id", nullable = false)

@@ -20,13 +20,13 @@ public class RutaEntrega {
     private Integer id;
 
     @Column(length = 200, nullable = false)
-    private String descripcion_ruta;
+    private String descripcionRuta;
 
     @Column(nullable = false)
-    private Double distancia_km;
+    private Double distanciaKm;
 
     @Column(nullable = false)
-    private Integer tiempo_estimado; // creo que lo dejaré en minutos, en los envios no suelen hablar en horas (creo(?))
+    private Integer tiempoEstimado; // creo que lo dejaré en minutos, en los envios no suelen hablar en horas (creo(?))
 
     // una ruta puede tener muchos envios de por medio... 
     @OneToMany(mappedBy = "rutaEntrega")

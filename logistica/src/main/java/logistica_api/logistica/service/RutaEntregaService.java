@@ -28,9 +28,9 @@ public class RutaEntregaService {
 
     public Optional<RutaEntrega> actualizar(Integer id, RutaEntrega datos) {
         return rutaEntregaRepository.findById(id).map(r -> {
-            r.setDescripcion_ruta(datos.getDescripcion_ruta());
-            r.setDistancia_km(datos.getDistancia_km());
-            r.setTiempo_estimado(datos.getTiempo_estimado());
+            r.setDescripcionRuta(datos.getDescripcionRuta());
+            r.setDistanciaKm(datos.getDistanciaKm());
+            r.setTiempoEstimado(datos.getTiempoEstimado());
             return rutaEntregaRepository.save(r);
         });
     }
