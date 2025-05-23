@@ -4,8 +4,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import administracion_api.administracion.AdministracionApiDto.TicketDto;
 import administracion_api.administracion.model.Usuario;
 import administracion_api.administracion.repository.UsuarioRepository;
 @Service
@@ -13,8 +11,6 @@ public class UsuarioService {
   @Autowired
     private UsuarioRepository usuarioRepository;
 
-    @Autowired
-    private TicketClient ticketClient;
 
     public List<Usuario> obtenerTodos() {
         return usuarioRepository.findAll();
@@ -46,8 +42,4 @@ public class UsuarioService {
         return false;
     }
 
-    //nuevo
-    public List<TicketDto> obtenerTicketsDeSoporte(Integer idUsuario) {
-    return ticketClient.obtenerTicketsPorSoporte(idUsuario);
-}
 }
