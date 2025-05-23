@@ -28,7 +28,7 @@ public class Usuario {
     @ManyToOne
     @JoinColumn(name = "id_rol", nullable = false)
     private Rol rol;
-
+    
     // recordar que cuando esten unidas las api se debe descomentar para que tenga la columna de sucursal.
     /*@ManyToOne
     @JoinColumn(name = "id_sucursal", nullable = false)
